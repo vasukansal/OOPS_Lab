@@ -9,6 +9,7 @@ public class Exp1_3 {
             arr[i] = sc.nextInt();
         }
         sort(arr);
+        sc.close();
         for (int i = 0; i < arr[2]; i++) {
             for (int j = 0; j < arr[1]; j++) {
                 for (int k = 0; k < arr[0]; k++) {

@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Exp2_2 {
+public class Exp4_2 {
     // #4
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
