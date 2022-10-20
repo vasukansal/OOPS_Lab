@@ -1,3 +1,5 @@
+
+//Write a program to input a number of a month (1 - 12) and print its equivalent name ofthe month.( e.g 1 to Jan, 2 to Feb. 12 to Dec.).
 import java.util.Scanner;
 
 public class Exp3_3 {
