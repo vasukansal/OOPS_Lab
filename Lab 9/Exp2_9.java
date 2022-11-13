@@ -1,20 +1,47 @@
-class test extends Thread {
-    String name;
+import java.util.Scanner;
 
-    public test(String name) {
-        this.name = name;
+class test extends Thread {
+    int no;
+
+    public test(int no) {
+        this.no = no;
     }
 
     public void run() {
-        System.out.println(this.name);
+        for (int i = 0; i < this.no; i++) {
+            if (i % 2 == 0) {
+                System.out.println("Even - " + i);
+            }
+        }
+    }
+}
+
+class test2 extends Thread {
+    int no;
+
+    public test2(int no) {
+        this.no = no;
+    }
+
+    public void run() {
+        for (int i = 0; i < this.no; i++) {
+            if (i % 2 != 0) {
+                System.out.println("Odd - " + i);
+            }
+        }
     }
 }
 
 public class Exp2_9 {
     public static void main(String[] args) {
-        Thread th1 = new Thread(new test("Thread1"));
-        Thread th2 = new Thread(new test("Thread2"));
-        th1.start();
-        th2.start();
+        Scanner sc = new Scanner(System.in);
+        int a;
+        System.out.print("Enter the limit - ");
+        a = sc.nextInt();
+        sc.close();
+        Thread even = new Thread(new test(a));
+        Thread odd = new Thread(new test2(a));
+        even.start();
+        odd.start();
     }
 }
