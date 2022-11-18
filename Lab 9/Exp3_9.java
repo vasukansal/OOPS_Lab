@@ -1,8 +1,12 @@
 class test extends Thread {
+    static int c = 0;
+
     public synchronized void output() {
+
         Thread t1 = new Thread();
         for (int i = 0; i < 10; i++) {
-            System.out.println(i);
+            this.c++;
+            System.out.println(this.c);
         }
     }
 
