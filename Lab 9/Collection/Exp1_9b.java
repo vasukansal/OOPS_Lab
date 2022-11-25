@@ -11,6 +11,7 @@ public class Exp1_9b {
         arr.add(sc.next());
         arr.add(sc.next());
         arr.add(sc.next());
+        sc.close();
         System.out.println("Original ------- ");
         System.out.println(arr);
         ArrayList<String> dupli = new ArrayList<String>();
